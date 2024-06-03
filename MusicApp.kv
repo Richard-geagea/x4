@@ -1,0 +1,116 @@
+WelcomeScreen:
+
+<LogInScreen>:
+    AnchorLayout:
+        BoxLayout:
+            size_hint: 0.5, 0.5
+            spacing: 20
+            orientation: "vertical"
+            Button:
+                text: "Log in"
+            TextInput:
+                id: log_in_username
+                size_hint: 1, None
+                height: 40
+                text: "AnthonyS"
+                multiline: False
+            TextInput:
+                id: log_in_password
+                size_hint: 1, None
+                height: 40
+                text: "Admin"
+                multiline: False
+            Button:
+                text: "Log In"
+                on_press: root.get_username_and_password()
+            Button:
+                size_hint: 0.4, 0.8
+                pos_hint: {"center_x" : 0.5}
+                text: "Back"
+                on_press:
+                    root.manager.current = 'welcome'
+                    root.manager.transition.direction = 'left'
+<SignUpScreen>:
+    AnchorLayout:
+        BoxLayout:
+            size_hint: 0.5, 0.5
+            spacing: 20
+            orientation: "vertical"
+            Button:
+                text: "Sign up"
+            TextInput:
+                id: sign_up_username
+                size_hint: 1, None
+                height: 40
+                text: "Username"
+                multiline: False
+            TextInput:
+                id: sign_up_password1
+                size_hint: 1, None
+                height: 40
+                text: "Password"
+                multiline: False
+            TextInput:
+                id: sign_up_password2
+                size_hint: 1, None
+                height: 40
+                text: "Confirm Password"
+                multiline: False
+            BoxLayout:
+                TextInput:
+                    id: sign_up_year
+                    size_hint: 1, None
+                    height: 40
+                    multiline: False
+                Label:
+                    text: "Year"
+                Spinner:
+                    id: sign_up_month
+                    text: "MM"
+                    values: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"]
+                    on_text: root.month_spinner_clicked(sign_up_month.text)
+                Label:
+                    text: "Month"
+                Spinner:
+                    id: sign_up_day
+                    text: "DD"
+                    values: ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"]
+                    on_text: root.day_spinner_clicked(sign_up_day.text)
+                Label:
+                    text: "Day"
+            Button:
+                text: "Sign Up"
+                on_press: root.create_new_user()
+            Button:
+                size_hint: 0.4, 0.8
+                pos_hint: {"center_x" : 0.5}
+                text: "Back"
+                on_press:
+                    root.manager.current = 'welcome'
+                    root.manager.transition.direction = 'right'
+
+<WelcomeScreen>:
+    AnchorLayout:
+        BoxLayout:
+            size_hint: 0.5, 0.5
+            orientation: "vertical"
+            Label:
+                size_hint: 0.9, 0.9
+                pos_hint: {"center_x" : 0.5}
+                text: "Welcome to our Music App!"
+            BoxLayout:
+                spacing: 20
+                Button:
+                    size_hint: 0.5, 0.5
+                    pos_hint: {"center_y" : 0.5}
+                    text: "Log in"
+                    on_press:
+                        root.manager.current = 'log_in'
+                        root.manager.transition.direction = 'right'
+                Button:
+                    size_hint: 0.5, 0.5
+                    pos_hint: {"center_y" : 0.5}
+                    text: "Sign up"
+                    on_press:
+                        root.manager.current = 'sign_up'
+                        root.manager.transition.direction = 'left'

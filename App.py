@@ -21,19 +21,6 @@ import pygame.mixer
 import DB_Management as dbm
 from pytube import YouTube, Search
 import os
-new modification is done commit , new modififcationssssssssssssssssssss
-PRIMARY_COLOR = [0.2, 0.2, 0.6, 1]
-SECONDARY_COLOR = [0.3, 0.3, 0.8, 1]
-ACCENT_COLOR = [0.4, 0.4, 0.9, 1]
-BORDER_COLOR = [0.7, 0.7, 0.9, 1]
-TEXT_COLOR = [1, 1, 1, 1]
-BACKGROUND_COLOR = [0.15, 0.15, 0.3, 1]
-
-def add_stuff():
-    conn = dbm.create_connection()
-    print(dbm.get_tracks_in_playlist(conn, 1))
-    conn.close()
-    print("Songs added!")
 
 def add_random_recommendations(screen, amount, screen_manager):
     conn = dbm.create_connection()
