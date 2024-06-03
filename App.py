@@ -21,7 +21,7 @@ import pygame.mixer
 import DB_Management as dbm
 from pytube import YouTube, Search
 import os
-
+new modification
 PRIMARY_COLOR = [0.2, 0.2, 0.6, 1]
 SECONDARY_COLOR = [0.3, 0.3, 0.8, 1]
 ACCENT_COLOR = [0.4, 0.4, 0.9, 1]
