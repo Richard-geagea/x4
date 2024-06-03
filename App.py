@@ -1,39 +1,3 @@
-from kivy.app import App
-from kivy.uix.widget import Widget
-from kivy.uix.button import Button
-from kivy.uix.anchorlayout import AnchorLayout
-from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.scrollview import ScrollView
-from kivy.uix.gridlayout import GridLayout
-from kivy.uix.screenmanager import ScreenManager, Screen
-from kivy.uix.textinput import TextInput
-from kivy.uix.label import Label
-from kivy.clock import Clock
-from kivy.uix.togglebutton import ToggleButton
-from kivy.uix.slider import Slider
-from kivy.metrics import dp
-from kivy.graphics import Color, Rectangle, Line
-from kivy.core.window import Window
-from kivy.utils import get_color_from_hex
-from kivy.uix.filechooser import FileChooserListView
-from kivy.uix.popup import Popup
-import pygame.mixer
-import DB_Management as dbm
-from pytube import YouTube, Search
-import os
-new modification is done commit , new modififcationssssssssssssssssssss
-PRIMARY_COLOR = [0.2, 0.2, 0.6, 1]
-SECONDARY_COLOR = [0.3, 0.3, 0.8, 1]
-ACCENT_COLOR = [0.4, 0.4, 0.9, 1]
-BORDER_COLOR = [0.7, 0.7, 0.9, 1]
-TEXT_COLOR = [1, 1, 1, 1]
-BACKGROUND_COLOR = [0.15, 0.15, 0.3, 1]
-
-def add_stuff():
-    conn = dbm.create_connection()
-    print(dbm.get_tracks_in_playlist(conn, 1))
-    conn.close()
-    print("Songs added!")
 
 def add_random_recommendations(screen, amount, screen_manager):
     conn = dbm.create_connection()
