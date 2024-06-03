@@ -1,26 +1,3 @@
-from kivy.app import App
-from kivy.uix.widget import Widget
-from kivy.uix.button import Button
-from kivy.uix.anchorlayout import AnchorLayout
-from kivy.uix.boxlayout import BoxLayout
-from kivy.uix.scrollview import ScrollView
-from kivy.uix.gridlayout import GridLayout
-from kivy.uix.screenmanager import ScreenManager, Screen
-from kivy.uix.textinput import TextInput
-from kivy.uix.label import Label
-from kivy.clock import Clock
-from kivy.uix.togglebutton import ToggleButton
-from kivy.uix.slider import Slider
-from kivy.metrics import dp
-from kivy.graphics import Color, Rectangle, Line
-from kivy.core.window import Window
-from kivy.utils import get_color_from_hex
-from kivy.uix.filechooser import FileChooserListView
-from kivy.uix.popup import Popup
-import pygame.mixer
-import DB_Management as dbm
-from pytube import YouTube, Search
-import os
 
 def add_random_recommendations(screen, amount, screen_manager):
     conn = dbm.create_connection()
